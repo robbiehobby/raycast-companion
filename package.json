@@ -1,0 +1,74 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "companion",
+  "title": "Companion",
+  "description": "Random assortment of useful Raycast commands.",
+  "icon": "extension-icon.png",
+  "scripts": {
+    "watch": "ray develop",
+    "build": "ray build",
+    "build:local": "ray build -o ./public"
+  },
+  "local": {
+    "destination": "~/.config/raycast/extensions/companion"
+  },
+  "devDependencies": {
+    "@raycast/api": "^1.87.4",
+    "@raycast/utils": "^1.17.0",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "@types/shell-quote": "^1.7.5",
+    "chrono-node": "^2.7.7",
+    "dayjs": "^1.11.13",
+    "typescript": "^5.4.5"
+  },
+  "commands": [
+    {
+      "name": "date",
+      "title": "Date & Time",
+      "description": "Convert dates and timestamps.",
+      "mode": "view",
+      "icon": "icons/date.png"
+    },
+    {
+      "name": "personalize",
+      "title": "Personalize Icons",
+      "description": "Apply custom icons to applications.",
+      "mode": "view",
+      "icon": "icons/personalize.png",
+      "preferences": [
+        {
+          "name": "folder",
+          "title": "Folder",
+          "description": "Folder containing the icons.",
+          "type": "directory",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "search",
+      "title": "Search Applications",
+      "description": "Find system and user installed applications.",
+      "mode": "view",
+      "icon": "icons/search.png"
+    },
+    {
+      "name": "transformer",
+      "title": "Text Transformer",
+      "description": "Encode and decode text and files using base64.",
+      "mode": "view",
+      "icon": "icons/transformer.png"
+    },
+    {
+      "name": "wifi",
+      "title": "Wi-Fi",
+      "description": "Show the Wi-Fi SSID in the menu bar.",
+      "mode": "menu-bar",
+      "interval": "10s"
+    }
+  ],
+  "dependencies": {
+    "shell-quote": "^1.8.2"
+  }
+}
