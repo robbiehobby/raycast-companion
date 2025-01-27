@@ -1,0 +1,76 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "companion",
+  "title": "Companion",
+  "description": "Random assortment of useful Raycast commands.",
+  "author": "robbiehobby",
+  "icon": "extension-icon.png",
+  "scripts": {
+    "watch": "ray develop",
+    "build": "ray build",
+    "build:local": "ray build -o ./public"
+  },
+  "devDependencies": {
+    "@raycast/api": "^1.87.4",
+    "@raycast/utils": "^1.17.0",
+    "@types/node": "20.8.10",
+    "@types/react": "18.3.3",
+    "chrono-node": "^2.7.7",
+    "dayjs": "^1.11.13",
+    "execa": "^9.5.2",
+    "typescript": "^5.4.5"
+  },
+  "commands": [
+    {
+      "name": "date-time",
+      "title": "Date & Time",
+      "description": "Convert dates and timestamps.",
+      "mode": "view",
+      "icon": "icons/date-time.png"
+    },
+    {
+      "name": "encode-decode",
+      "title": "Encode & Decode",
+      "description": "Encode and decode text and files using base64.",
+      "mode": "view",
+      "icon": "icons/encode-decode.png"
+    },
+    {
+      "name": "icons",
+      "title": "Icons",
+      "description": "Apply personalized icons to applications.",
+      "mode": "view",
+      "icon": "icons/icons.png",
+      "preferences": [
+        {
+          "name": "folder",
+          "title": "Folder",
+          "description": "Folder containing the icons.",
+          "type": "directory",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "orbstack",
+      "title": "OrbStack Data",
+      "description": "Show the current OrbStack data location in the menu bar.",
+      "mode": "menu-bar",
+      "interval": "10s"
+    },
+    {
+      "name": "toggle-case",
+      "title": "Toggle Case",
+      "description": "Toggle the selected text between upper and lower case.",
+      "mode": "no-view",
+      "icon": "icons/toggle-case.png"
+    },
+    {
+      "name": "wifi",
+      "title": "Wi-Fi",
+      "description": "Show the Wi-Fi SSID in the menu bar.",
+      "mode": "menu-bar",
+      "interval": "10s"
+    }
+  ]
+}
